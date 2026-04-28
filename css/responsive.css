@@ -1,0 +1,57 @@
+/* Responsive Design */
+@media (max-width: 820px) {
+  body {
+    padding: 16px;
+    justify-content: flex-start;
+  }
+  .sidebar {
+    max-width: 100%;
+  }
+  .dashboard {
+    flex-direction: column;
+    margin-bottom: 24px;
+  }
+  .merged-grid {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .merged-col {
+    min-width: 100%;
+  }
+  .theme-toggle, .lang-toggle {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    justify-content: flex-start;
+  }
+  .profile-area, .main-content {
+    padding: 1.5rem;
+  }
+  .unified-bottom-bar {
+    padding: 1.2rem;
+  }
+  footer {
+    font-size: 0.65rem;
+  }
+  .dashboard {
+    margin-bottom: 20px;
+  }
+  .item-row {
+    flex-wrap: wrap;
+  }
+  .spacer {
+    display: none;
+  }
+  .action-btn, .external-link {
+    margin-left: auto;
+  }
+  body.rtl .action-btn, body.rtl .external-link {
+    margin-left: 0;
+    margin-right: auto;
+  }
+}

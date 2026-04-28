@@ -1,0 +1,3 @@
+fas fa-code
+Welcome to My Blog
+This is my first blog post. I will share my thoughts on technology, programming, and design.

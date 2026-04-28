@@ -1,0 +1,53 @@
+/* RTL support */
+body.rtl {
+  direction: rtl;
+}
+
+body.rtl .item-row .spacer {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+body.rtl .action-btn,
+body.rtl .external-link {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+body.rtl .item-row:hover {
+  transform: translateX(3px);
+}
+
+/* English mode: icon left, text right */
+body:not(.rtl) .section-title {
+  flex-direction: row;
+}
+body:not(.rtl) .section-title .title-icon {
+  order: 1;
+}
+body:not(.rtl) .section-title .title-text {
+  order: 2;
+}
+
+/* Persian mode: icon right, text left */
+body.rtl .section-title {
+  flex-direction: row;
+}
+body.rtl .section-title .title-icon {
+  order: 2;
+}
+body.rtl .section-title .title-text {
+  order: 1;
+}
+
+/* Location fix for RTL */
+body.rtl .profile-info .location {
+  direction: rtl;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+}
+
+body.rtl .profile-info .location i {
+  margin-left: 6px;
+  margin-right: 0;
+}

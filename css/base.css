@@ -1,0 +1,67 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Light Mode Variables */
+:root {
+  --bg-body: #FCF9F2;
+  --text-primary: #1E2724;
+  --text-secondary: #4A5C56;
+  --title-color: #1E2724;
+  --card-bg: #FFFFFF;
+  --border-color: rgba(0, 0, 0, 0.08);
+  --post-card-bg: #FFFFFF;
+  --post-border: #E8E4DC;
+  --post-title: #1E2724;
+  --post-text: #2D3A36;
+  --accent-primary: #D95A41;
+  --accent-secondary: #3B7A6B;
+  --location-bg: #F0EDE5;
+  --item-bg: #F7F5EF;
+  --item-hover: #EBE7DE;
+  --btn-bg: #F0EDE5;
+  --btn-hover: #E3DFD4;
+  --shadow: rgba(0, 0, 0, 0.08);
+  --footer-color: #8A9B94;
+  --circle-bg: rgba(217, 90, 65, 0.12);
+}
+
+/* Dark Mode Variables */
+body.dark {
+  --bg-body: #161C1A;
+  --text-primary: #EEEFED;
+  --text-secondary: #BDCDC6;
+  --title-color: #EEEFED;
+  --card-bg: #1F2825;
+  --border-color: rgba(255, 255, 255, 0.08);
+  --post-card-bg: #1F2825;
+  --post-border: #2E3A36;
+  --post-title: #EEEFED;
+  --post-text: #CDDDD6;
+  --accent-primary: #D95A41;
+  --accent-secondary: #3B7A6B;
+  --location-bg: #2A3531;
+  --item-bg: #2A3531;
+  --item-hover: #35433E;
+  --btn-bg: #2A3531;
+  --btn-hover: #35433E;
+  --shadow: rgba(0, 0, 0, 0.3);
+  --footer-color: #8A9B94;
+  --circle-bg: rgba(217, 90, 65, 0.2);
+}
+
+body {
+  font-family: 'Vazirmatn', 'Segoe UI', Tahoma, system-ui, sans-serif;
+  background: var(--bg-body);
+  min-height: 100vh;
+  padding: 24px 20px;
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow-x: hidden;
+  transition: background 0.3s ease, color 0.2s ease;
+}
