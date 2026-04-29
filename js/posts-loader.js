@@ -1,24 +1,29 @@
-l// posts-loader.js - خواندن فایل‌ها از پوشه "post"
+// posts-loader.js - خواندن فایل‌های JSON از پوشه "post"
 const postCount = 4;
 let postsContainer = null;
 
 async function fetchPost(index, lang) {
-  const fileName = `post/${index}-${lang}.txt`;  // ← تغییر مسیر به پوشه post
+  const fileName = `post/${index}.json`;
   try {
     const response = await fetch(fileName);
     if (!response.ok) {
       console.warn(`File not found: ${fileName}`);
       return null;
     }
-    const text = await response.text();
-    const lines = text.split(/\r?\n/);
-    if (lines.length < 2) return null;
-    let icon = lines[0].trim() || 'fas fa-file-alt';
-    let title = lines[1].trim() || 'No Title';
-    let content = lines.slice(2).join('\n').trim();
-    if (!content) content = '(Empty post)';
+    const data = await response.json();
+    const post = data[lang];
+    // اگر برای این زبان پستی وجود ندارد یا عنوان خالی است → پست را نمایش نده
+    if (!post || !post.title || post.title.trim() === '') {
+      console.warn(`Post ${index} has no valid title in ${lang}`);
+      return null;
+    }
+    let content = post.content || '';
     content = content.replace(/\n/g, '<br>');
-    return { icon, title, content };
+    return {
+      icon: post.icon || 'fas fa-file-alt',
+      title: post.title,
+      content: content
+    };
   } catch (err) {
     console.warn(`Error loading ${fileName}:`, err);
     return null;
@@ -33,22 +38,21 @@ async function loadAllPosts() {
       return;
     }
   }
-  
   const lang = localStorage.getItem('language') || 'en';
   postsContainer.innerHTML = `<div class="loading"><i class="fas fa-spinner fa-pulse"></i> Loading posts (${lang})...</div>`;
-  
+
   const promises = [];
   for (let i = 1; i <= postCount; i++) {
     promises.push(fetchPost(i, lang));
   }
   const results = await Promise.all(promises);
   const validPosts = results.filter(p => p !== null);
-  
+
   if (validPosts.length === 0) {
-    postsContainer.innerHTML = `<div class="loading">⚠️ No posts found for language "${lang}".<br>Create files: 1-${lang}.txt, 2-${lang}.txt, ... in the "post" folder.</div>`;
+    postsContainer.innerHTML = `<div class="loading">⚠️ No posts found for language "${lang}".<br>Create files: post/1.json, post/2.json, ...</div>`;
     return;
   }
-  
+
   postsContainer.innerHTML = '';
   validPosts.forEach(post => {
     const card = document.createElement('div');
@@ -72,4 +76,3 @@ function escapeHtml(str) {
 }
 
 window.reloadPosts = loadAllPosts;
-loadAllPosts();
