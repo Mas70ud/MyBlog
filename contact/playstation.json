@@ -1,0 +1,12 @@
+{
+  "icon": "fab fa-playstation",
+  "name": {
+    "en": "PlayStation",
+    "fa": "پلی‌استیشن"
+  },
+  "buttonText": {
+    "en": "View Profile",
+    "fa": "مشاهده پروفایل"
+  },
+  "buttonLink": "https://psnprofiles.com/mas70ud1"
+}

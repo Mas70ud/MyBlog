@@ -1,0 +1,12 @@
+{
+  "icon": "fab fa-github",
+  "name": {
+    "en": "GitHub",
+    "fa": "گیت‌هاب"
+  },
+  "buttonText": {
+    "en": "Visit",
+    "fa": "مشاهده"
+  },
+  "buttonLink": "https://github.com/Mas70ud"
+}

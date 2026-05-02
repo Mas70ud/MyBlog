@@ -1,12 +1,12 @@
 {
   "en": {
     "icon": "fas fa-code",
-    "title": "Hello World",
-    "content": "This is English post."
+    "title": "",
+    "content": ""
   },
   "fa": {
     "icon": "fas fa-code",
     "title": "",
-    "content": "این پست عنوان ندارد."
+    "content": ""
   }
 }

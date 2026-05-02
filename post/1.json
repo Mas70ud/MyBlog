@@ -1,12 +1,12 @@
 {
   "en": {
     "icon": "fas fa-code",
-    "title": "Welcome to My Blog",
-    "content": "This is my first blog post. I will share my thoughts on technology, programming, and design.\nYou can write multiple lines here."
+    "title": "Welcome",
+    "content": "This is first POST!"
   },
   "fa": {
     "icon": "fas fa-code",
-    "title": "به وبلاگ من خوش آمدید",
-    "content": "این اولین پست وبلاگ من است. افکارم را درباره تکنولوژی، برنامه‌نویسی و طراحی به اشتراک می‌گذارم.\nمی‌توانید چندین خط بنویسید."
+    "title": "خوش آمدید",
+    "content": "این اولین پست است"
   }
 }

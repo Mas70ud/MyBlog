@@ -1,0 +1,12 @@
+{
+  "icon": "fas fa-envelope",
+  "name": {
+    "en": "Email",
+    "fa": "ایمیل"
+  },
+  "buttonText": {
+    "en": "Send Email",
+    "fa": "ارسال ایمیل"
+  },
+  "buttonLink": "mailto:mas70ud@gmail.com"
+}

@@ -1,4 +1,5 @@
-/* Profile & Avatar */
+/* components.css - استایل تمام کامپوننت‌ها با فاصله کاهش یافته برای بخش پایین */
+
 .avatar {
   width: 110px;
   height: 110px;
@@ -43,7 +44,6 @@
   margin-top: 8px;
 }
 
-/* Section Titles with Orange Circle */
 .section-title {
   font-size: 1rem;
   font-weight: 700;
@@ -74,7 +74,7 @@
   color: var(--title-color);
 }
 
-/* Posts Grid - auto-fill برای حفظ اندازه کارت‌ها */
+/* Posts Grid */
 .grid-4 {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -134,11 +134,11 @@
   grid-column: 1 / -1;
 }
 
-/* Bottom Bar Items */
+/* ======= بخش پایین (Services & Communication) - فاصله کاهش یافته ======= */
 .merged-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1rem;          /* کاهش از 2rem به 1rem */
   justify-content: space-between;
 }
 
@@ -150,15 +150,15 @@
 .items-list {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.5rem;        /* کاهش از 0.75rem به 0.5rem */
 }
 
 .item-row {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;           /* کاهش از 12px به 8px */
   background: var(--item-bg);
-  padding: 8px 14px;
+  padding: 6px 12px;  /* کاهش پدینگ */
   border-radius: 1.2rem;
   transition: all 0.2s;
   flex-wrap: wrap;
@@ -221,4 +221,22 @@
 .action-btn:hover {
   background: var(--btn-hover);
   color: var(--accent-primary);
+}
+
+/* تنظیمات اضافی برای موبایل (فاصله کمتر) */
+@media (max-width: 480px) {
+  .merged-grid {
+    gap: 0.75rem;
+  }
+  .items-list {
+    gap: 0.4rem;
+  }
+  .item-row {
+    padding: 4px 10px;
+    gap: 6px;
+  }
+  .action-btn, .external-link {
+    padding: 3px 8px;
+    font-size: 0.65rem;
+  }
 }

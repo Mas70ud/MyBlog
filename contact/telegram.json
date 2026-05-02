@@ -1,0 +1,12 @@
+{
+  "icon": "fab fa-telegram-plane",
+  "name": {
+    "en": "Telegram",
+    "fa": "تلگرام"
+  },
+  "buttonText": {
+    "en": "Send Message",
+    "fa": "ارسال پیام"
+  },
+  "buttonLink": "https://t.me/mas70ud"
+}

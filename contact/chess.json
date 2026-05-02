@@ -1,0 +1,12 @@
+{
+  "icon": "fas fa-chess-knight",
+  "name": {
+    "en": "Lichess",
+    "fa": "لیچس"
+  },
+  "buttonText": {
+    "en": "Play",
+    "fa": "بازی"
+  },
+  "buttonLink": "https://lichess.org/@/mas70ud"
+}
